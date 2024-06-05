@@ -39,10 +39,13 @@ export default function Home() {
             {data.map((post) => (
               <div
                 key={post.id}
-                className="flex justify-center"
+                className="flex justify-center cursor-pointer"
                 href={`/blog/${post.id}`}
               >
                 <Card
+                  key={post.id}
+                  href={`/blog/${post.id}`}
+                  passHref
                   title={post.title}
                   date={post.date}
                   author={post.author}
